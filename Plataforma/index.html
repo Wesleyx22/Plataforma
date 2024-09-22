@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPX - Plataforma de Cursos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo" onclick="window.location.href='login.html'">
+                <h1>ShopeeTube</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar cursos...">
+                <button onclick="searchCourse()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="video-section">
+            <div class="video-player">
+                <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h2 id="video-title">Título do Curso</h2>
+                <p id="video-description">Esse curso e sobre....</p>
+                <button id="like-btn" onclick="toggleLike()">Curtir 👍</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Cursos</h3>
+            <ul>
+                <li>
+                    <a href="#" onclick="loadCourse('Google Planilhas', ['Aula 1', 'Aula 2', 'Aula 3'], 'https://www.youtube.com/embed/D1jQKpse7Yw')">Google Planilhas</a>
+                    <ul class="lesson-list" data-course="Google Planilhas"></ul>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCourse('Curso 2', ['Aula 1', 'Aula 2'], 'https://www.youtube.com/embed/_y9OCAzcJVw')">Curso 2</a>
+                    <ul class="lesson-list" data-course="Curso 2"></ul>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCourse('Curso 3', ['Aula 1', 'Aula 2'], 'https://www.youtube.com/embed/fLix2_Hcg14')">Curso 3</a>
+                    <ul class="lesson-list" data-course="Curso 3"></ul>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Torques22. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
